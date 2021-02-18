@@ -11,6 +11,25 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row justify-center">
+        <p class="is-success">
+          <% if notice %>
+            notice
+          <% end %>
+        </p>
+      </div>
+
+      <div class="row justify-center">
+        <p class="is-danger">
+          <% if alert %>
+            alert
+          <% end %>
+        </p>
+      </div>
+          
+      
+      <%= yield %>
+    </div>
   </body>
 </html>
