@@ -1,0 +1,23 @@
+<div class="row justify-center">
+  <div class="col-md-5 mb-3">
+    <h2>Sign Up</h2>
+  </div>
+</div>
+
+<div class="row justify-content-center mt-2">
+  <div class="col-md-5 ">
+
+    <%= form_tag sessions_path do %> 
+
+      <%= label_tag :username, 'User Name',class: "form-label" %>
+      <%= text_field_tag :username,nil,  class: "form-control mb-3"%>
+
+      <%= label_tag :password, 'Password',class: "form-label" %>
+      <%= password_field_tag :password, nil, class: "form-control mb-5"%>
+      
+
+      <%= submit_tag 'Log In', class: "btn btn-success" %> 
+    <% end %>
+    
+  </div>
+</div>

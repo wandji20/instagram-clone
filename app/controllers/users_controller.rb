@@ -8,11 +8,12 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       redirect_to root_path,
-      notice: " #{@user.name}, You Have Successfully Registered as #{@user.username}"
+    notice: " , You Have Successfully Registered as "
     else
-      render 'new'
-      # alert: 'Something went wrong, Please Try Again'
+      render 'new',
+      alert:  'Registration Unsuccessful Something went wrong, Please Try Again'
     end
   end
 

@@ -1,4 +1,12 @@
-<h1>Welcome to Instagram</h1>
-<% @users.each do |item| %>
-  <%= item.name %>
-<% end %>
+<div class="row">
+  <div class="col">
+    <h2>Feeds</h2>
+  </div>
+  <div class="col">
+    <h1>Welcome to Instagram</h1>
+    <% @users.each do |item| %>
+      <%= item.name %>
+    <% end %>
+  </div>
+
+</div>

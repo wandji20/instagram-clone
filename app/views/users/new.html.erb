@@ -1,10 +1,10 @@
-<div class="row justify-center">
+<div class="row justify-content-center">
   <div class="col-md-5 mb-3">
     <h2>Sign Up</h2>
   </div>
 </div>
 
-<div class="row justify-center mt-2">
+<div class="row justify-content-center mt-2">
   <div class="col-md-5 ">
 
     <%= form_for @user do |f| %>
@@ -20,7 +20,7 @@
 
       <%= f.label :username, 'User Name',class: "form-label" %>
       <%= f.text_field :username, class: "form-control mb-3"%>
-        <%  @user.errors.full_messages_for(:name).each do |message| %>
+        <%  @user.errors.full_messages_for(:username).each do |message| %>
         <div>
           <p><%= message %></p>
         </div>
@@ -28,15 +28,15 @@
 
       <%= f.label :email, 'Email',class: "form-label" %>
       <%= f.email_field :email, class: "form-control mb-3"%>
-        <%  @user.errors.full_messages_for(:name).each do |message| %>
+        <%  @user.errors.full_messages_for(:email).each do |message| %>
         <div>
           <p><%= message %></p>
         </div>
       <% end %>
 
       <%= f.label :password, 'Password',class: "form-label" %>
-      <%= f.password_field :name, class: "form-control mb-5"%>
-        <%  @user.errors.full_messages_for(:name).each do |message| %>
+      <%= f.password_field :password, class: "form-control mb-5"%>
+        <%  @user.errors.full_messages_for(:password).each do |message| %>
         <div>
           <p><%= message %></p>
         </div>
