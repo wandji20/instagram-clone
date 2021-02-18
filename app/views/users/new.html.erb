@@ -9,16 +9,38 @@
 
     <%= form_for @user do |f| %>
       <%= f.label :name, 'Name',class: "form-label" %>
-      <%= f.text_field :name, class: "form-control mb-3", placeholder:'Input Name'%>
+      <%= f.text_field :name, class: "form-control mb-3"%>
+      
+      <%  @user.errors.full_messages_for(:name).each do |message| %>
+        <div>
+          <p><%= message %></p>
+        </div>
+      <% end %>
+      
 
       <%= f.label :username, 'User Name',class: "form-label" %>
-      <%= f.text_field :username, class: "form-control mb-3", placeholder:'Input User Name'%>
+      <%= f.text_field :username, class: "form-control mb-3"%>
+        <%  @user.errors.full_messages_for(:name).each do |message| %>
+        <div>
+          <p><%= message %></p>
+        </div>
+      <% end %>
 
       <%= f.label :email, 'Email',class: "form-label" %>
-      <%= f.email_field :email, class: "form-control mb-3", placeholder:'Input Email'%>
+      <%= f.email_field :email, class: "form-control mb-3"%>
+        <%  @user.errors.full_messages_for(:name).each do |message| %>
+        <div>
+          <p><%= message %></p>
+        </div>
+      <% end %>
 
       <%= f.label :password, 'Password',class: "form-label" %>
-      <%= f.password_field :name, class: "form-control mb-5", placeholder:'Input Password'%>
+      <%= f.password_field :name, class: "form-control mb-5"%>
+        <%  @user.errors.full_messages_for(:name).each do |message| %>
+        <div>
+          <p><%= message %></p>
+        </div>
+      <% end %>
 
       <%= f.submit 'Register', class: "btn btn-success" %> 
     <% end %>

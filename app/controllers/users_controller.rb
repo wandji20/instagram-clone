@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-
+    @users = User.all
   end
   def new
     @user = User.new
@@ -11,8 +11,8 @@ class UsersController < ApplicationController
       redirect_to root_path,
       notice: " #{@user.name}, You Have Successfully Registered as #{@user.username}"
     else
-      render 'new',
-      alert: 'Something went wrong, Please Try Again'
+      render 'new'
+      # alert: 'Something went wrong, Please Try Again'
     end
   end
 
