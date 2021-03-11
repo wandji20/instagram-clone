@@ -10,15 +10,14 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-      <p class="is-success">
+  <body class = 'container-fluid'>
+      <p class="is-success row">
         <% if notice %>
           <%= notice %>
         <% end %>
       </p>
 
-
-      <p class="is-danger">
+      <p class="is-danger row">
         <% if alert %>
           <%= alert %>
         <% end %>
@@ -62,6 +61,42 @@
         </div>
       </nav>
       <%= yield %>
-    
+      <footer class = 'container'>
+        <ul class = 'row justify-content-center text-center'>
+          <%= link_to class: ''  do %>
+            <li>About</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Blog</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Jobs</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Help</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>API</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Privacy</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Terms</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Top Accounts</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Hashtags</li>
+          <% end %>
+          <%= link_to class: ''  do %>
+            <li>Locations</li>
+          <% end %> 
+        </ul>
+        <div class="row justify-content-center">
+          <span>English</span> <span>2021 Instagram from Facebook</span>
+        </div>
+      </footer>
   </body>
 </html>

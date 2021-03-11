@@ -4,9 +4,7 @@
   </div>
   <div class="col">
     <h1>Welcome to Instagram</h1>
-    <% @users.each do |item| %>
-      <%= item.name %>
-    <% end %>
+    <%= render @users %>
   </div>
 
 </div>

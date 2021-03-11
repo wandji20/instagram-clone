@@ -1,49 +1,58 @@
-<div class="row justify-content-center">
-  <div class="col-md-5 mb-3">
-    <h2>Sign Up</h2>
-  </div>
-</div>
 
-<div class="row justify-content-center mt-2">
-  <div class="col-md-5 ">
+  <div class="container w-50 ">
+    <section>
+      <h2>Instagram</h2>
+      <h5>Sign up to see photos and videos of your friends.</h5>
+      <div>
+        <button class = 'btn bg-info w-100'>
+          <span>icon</span>
+          <span>Log in with facebook</span>
+        </button>
+      </div>
+    </section>
 
-    <%= form_for @user do |f| %>
-      <%= f.label :name, 'Name',class: "form-label" %>
-      <%= f.text_field :name, class: "form-control mb-3"%>
+    <section class=" ">
+
+      <%= form_for @user do |f| %>
+        <%= f.label :name, 'Name',class: "form-label" %>
+        <%= f.text_field :name, class: "form-control mb-3"%>
+        
+        <%  @user.errors.full_messages_for(:name).each do |message| %>
+          <div>
+            <p><%= message %></p>
+          </div>
+        <% end %>
+        
+
+        <%= f.label :username, 'User Name',class: "form-label" %>
+        <%= f.text_field :username, class: "form-control mb-1"%>
+
+        <%= f.label :email, 'Email',class: "form-label" %>
+        <%= f.email_field :email, class: "form-control mb-1"%>
+
+        <%= f.label :password, 'Password',class: "form-label" %>
+        <%= f.password_field :password, class: "form-control mb-1"%>
       
-      <%  @user.errors.full_messages_for(:name).each do |message| %>
-        <div>
-          <p><%= message %></p>
-        </div>
+        <%= f.submit 'Sign up', class: "btn form-control btn-info" %> 
       <% end %>
-      
-
-      <%= f.label :username, 'User Name',class: "form-label" %>
-      <%= f.text_field :username, class: "form-control mb-3"%>
-        <%  @user.errors.full_messages_for(:username).each do |message| %>
-        <div>
-          <p><%= message %></p>
-        </div>
-      <% end %>
-
-      <%= f.label :email, 'Email',class: "form-label" %>
-      <%= f.email_field :email, class: "form-control mb-3"%>
-        <%  @user.errors.full_messages_for(:email).each do |message| %>
-        <div>
-          <p><%= message %></p>
-        </div>
-      <% end %>
-
-      <%= f.label :password, 'Password',class: "form-label" %>
-      <%= f.password_field :password, class: "form-control mb-5"%>
-        <%  @user.errors.full_messages_for(:password).each do |message| %>
-        <div>
-          <p><%= message %></p>
-        </div>
-      <% end %>
-
-      <%= f.submit 'Register', class: "btn btn-success" %> 
-    <% end %>
-    
+    </section>
+    <section class="text-center">
+      <p>By signing up, you agree to out <span>Terms</span>, <span>Data</span> <span>Policy and <span>Cookies Policy</span></span>
+      </p>
+    </section>
+ 
+    <div class="text-center">
+      <p>Have an account? 
+        <span><%= link_to 'Log in', new_session_path %></span>
+      </p>
+    </div>
+    <p class = 'text-center' >Get the App</p>
+    <section class="text-center">
+        <button class = 'btn bg-info '></button>
+        <button class = 'btn bg-info'></button>
+    </section>
   </div>
-</div>
+
+  
+  
+
